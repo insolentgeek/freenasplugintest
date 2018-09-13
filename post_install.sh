@@ -24,4 +24,6 @@ chown _sabnzbd:_sabnzbd /usr/local/sabnzbd/sabnzbd.ini
 #
 #
 #
-service sabnzbd onestart
+sysrc sabnzbd_enable=YES
+service sabnzbd start
+
