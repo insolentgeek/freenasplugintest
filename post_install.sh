@@ -1,11 +1,10 @@
 #!/bin/sh
-
-
+#
 # Post install script for first test plugin.
 # Written by jaxjexjox (Disk Diddler) @FreeNAS
 #
 #
-pkg install sabnzbdplus
+#pkg install sabnzbdplus
 # May not be needed, as it's a post install script
 #
 service sabnzbd onestart
