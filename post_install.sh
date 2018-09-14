@@ -8,15 +8,16 @@
 # pkg install sabnzbdplus
 # I'm fairly certain, this is actually not required, as it's a post install script, but I originally had this line in here.
 #
-#service sabnzbd onestart
-#service sabnzbd stop
+service sabnzbd onestart
+sleep 5s
+service sabnzbd onestop
 #
 # Start and stop the plugin, Sab  create some folders and files you need to change
 #
-#sleep 5s
+sleep 5s
 #
-#mv /usr/local/sabnzbdprep.ini /usr/local/sabnzbd/sabnzbd.ini
-#chown _sabnzbd:_sabnzbd /usr/local/sabnzbd/sabnzbd.ini
+cp /usr/local/sabnzbdprep.ini /usr/local/sabnzbd/sabnzbd.ini
+chown _sabnzbd:_sabnzbd /usr/local/sabnzbd/sabnzbd.ini
 #
 # This replaces the sabnzbd.ini file with a corrected file and sets permissions
 # Corrected version changes the "host" string from 127.0.0.1 to 0.0.0.0
@@ -24,5 +25,5 @@
 #
 #
 #
-#sysrc sabnzbd_enable=YES
-#service sabnzbd start
+sysrc sabnzbd_enable=YES
+service sabnzbd start
