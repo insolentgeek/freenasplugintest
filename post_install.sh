@@ -12,15 +12,9 @@ sleep 5
 #
 # Start and stop the plugin, Sab will create some folders and files which need some reconfiguring.
 #
+sed -I '' 's/127.0.0.1/0.0.0.0/g' /usr/local/sabnzbd/sabnzbd.ini
 #
-mv /usr/local/sabnzbdprep.ini /usr/local/sabnzbd/sabnzbd.ini
-chown _sabnzbd:_sabnzbd /usr/local/sabnzbd/sabnzbd.ini
-#
-# This replaces the sabnzbd.ini file with a corrected file and sets permissions
-# Corrected version changes the "host" string from 127.0.0.1 to 0.0.0.0
-# I am unsure why, but until changed, the WebUI will not work
-#
-#
+# This changes 127.0.0.1 to 0.0.0.0 in the sabnzbd.ini file
 #
 sysrc sabnzbd_enable=YES
 service sabnzbd start
