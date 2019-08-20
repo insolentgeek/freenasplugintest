@@ -1,9 +1,8 @@
 #!/bin/sh
 #
 # Post install script for installing SabNZBDPlus plugin
-# Written by jaxjexjox (Disk Diddler) @FreeNAS 
-# This has been tested working 14/Sept/2018
-# Please note, very much an amateur plugin writer
+# Originally written by jaxjexjox (Disk Diddler) @FreeNAS
+# This has been tested working 2019/08/19
 #
 service sabnzbd onestart
 sleep 5
